@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Clock Alarm</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>World Clock Alarm</h1>
+    </header>
+    
+    <main>
+        <div class="time-zone" data-city="India" data-offset="5.5">
+            <h2>India</h2>
+            <p class="time">Loading...</p>
+        </div>
+        <div id="clocks">
+            <div class="time-zone" data-city="New York" data-offset="-5">
+                <h2>New York</h2>
+                <p class="time">Loading...</p>
+            </div>
+            <div class="time-zone" data-city="London" data-offset="0">
+                <h2>London</h2>
+                <p class="time">Loading...</p>
+            </div>
+            <div class="time-zone" data-city="Tokyo" data-offset="9">
+                <h2>Tokyo</h2>
+                <p class="time">Loading...</p>
+            </div>
+          
+        </div>
+
+        <form id="alarm-form">
+            <label for="alarm-city">Select Country:</label>
+            <select id="alarm-city" required>
+                <option value="India">India (New Delhi) - UTC +5.5</option>
+    <option value="Afghanistan">Afghanistan (Kabul) - UTC +4.5</option>
+    <option value="Albania">Albania (Tirana) - UTC +1</option>
+    <option value="Algeria">Algeria (Algiers) - UTC +1</option>
+    <option value="Andorra">Andorra (Andorra la Vella) - UTC +1</option>
+    <option value="Angola">Angola (Luanda) - UTC +1</option>
+    <option value="Antigua and Barbuda">Antigua and Barbuda (Saint John's) - UTC -4</option>
+    <option value="Argentina">Argentina (Buenos Aires) - UTC -3</option>
+    <option value="Armenia">Armenia (Yerevan) - UTC +4</option>
+    <option value="Australia">Australia (Canberra) - UTC +11</option>
+    <option value="Austria">Austria (Vienna) - UTC +1</option>
+    <option value="Azerbaijan">Azerbaijan (Baku) - UTC +4</option>
+    <option value="Bahamas">Bahamas (Nassau) - UTC -5</option>
+    <option value="Bahrain">Bahrain (Manama) - UTC +3</option>
+    <option value="Bangladesh">Bangladesh (Dhaka) - UTC +6</option>
+    <option value="Barbados">Barbados (Bridgetown) - UTC -4</option>
+    <option value="Belarus">Belarus (Minsk) - UTC +3</option>
+    <option value="Belgium">Belgium (Brussels) - UTC +1</option>
+    <option value="Belize">Belize (Belmopan) - UTC -6</option>
+    <option value="Benin">Benin (Porto-Novo) - UTC +1</option>
+    <option value="Bhutan">Bhutan (Thimphu) - UTC +6</option>
+    <option value="Bolivia">Bolivia (Sucre) - UTC -4</option>
+    <option value="Bosnia and Herzegovina">Bosnia and Herzegovina (Sarajevo) - UTC +1</option>
+    <option value="Botswana">Botswana (Gaborone) - UTC +2</option>
+    <option value="Brazil">Brazil (Brasília) - UTC -3</option>
+    <option value="Brunei">Brunei (Bandar Seri Begawan) - UTC +8</option>
+    <option value="Bulgaria">Bulgaria (Sofia) - UTC +2</option>
+    <option value="Burkina Faso">Burkina Faso (Ouagadougou) - UTC +0</option>
+    <option value="Burundi">Burundi (Gitega) - UTC +2</option>
+    <option value="Cabo Verde">Cabo Verde (Praia) - UTC -1</option>
+    <option value="Cambodia">Cambodia (Phnom Penh) - UTC +7</option>
+    <option value="Cameroon">Cameroon (Yaoundé) - UTC +1</option>
+    <option value="Canada">Canada (Ottawa) - UTC -5</option>
+    <option value="Central African Republic">Central African Republic (Bangui) - UTC +1</option>
+    <option value="Chad">Chad (N'Djamena) - UTC +1</option>
+    <option value="Chile">Chile (Santiago) - UTC -3</option>
+    <option value="China">China (Beijing) - UTC +8</option>
+    <option value="Colombia">Colombia (Bogotá) - UTC -5</option>
+    <option value="Comoros">Comoros (Moroni) - UTC +3</option>
+    <option value="Congo">Congo (Brazzaville) - UTC +1</option>
+    <option value="Costa Rica">Costa Rica (San José) - UTC -6</option>
+    <option value="Croatia">Croatia (Zagreb) - UTC +1</option>
+    <option value="Cuba">Cuba (Havana) - UTC -5</option>
+    <option value="Cyprus">Cyprus (Nicosia) - UTC +2</option>
+    <option value="Czech Republic">Czech Republic (Prague) - UTC +1</option>
+    <option value="Denmark">Denmark (Copenhagen) - UTC +1</option>
+    <option value="Djibouti">Djibouti (Djibouti) - UTC +3</option>
+    <option value="Dominica">Dominica (Roseau) - UTC -4</option>
+    <option value="Dominican Republic">Dominican Republic (Santo Domingo) - UTC -4</option>
+    <option value="Ecuador">Ecuador (Quito) - UTC -5</option>
+    <option value="Egypt">Egypt (Cairo) - UTC +2</option>
+    <option value="El Salvador">El Salvador (San Salvador) - UTC -6</option>
+    <option value="Equatorial Guinea">Equatorial Guinea (Malabo) - UTC +1</option>
+    <option value="Eritrea">Eritrea (Asmara) - UTC +3</option>
+    <option value="Estonia">Estonia (Tallinn) - UTC +2</option>
+    <option value="Eswatini">Eswatini (Mbabane) - UTC +2</option>
+    <option value="Ethiopia">Ethiopia (Addis Ababa) - UTC +3</option>
+    <option value="Fiji">Fiji (Suva) - UTC +12</option>
+    <option value="Finland">Finland (Helsinki) - UTC +2</option>
+    <option value="France">France (Paris) - UTC +1</option>
+    <option value="Gabon">Gabon (Libreville) - UTC +1</option>
+    <option value="Gambia">Gambia (Banjul) - UTC +0</option>
+    <option value="Georgia">Georgia (Tbilisi) - UTC +4</option>
+    <option value="Germany">Germany (Berlin) - UTC +1</option>
+    <option value="Ghana">Ghana (Accra) - UTC +0</option>
+    <option value="Greece">Greece (Athens) - UTC +2</option>
+    <option value="Grenada">Grenada (Saint George's) - UTC -4</option>
+    <option value="Guatemala">Guatemala (Guatemala City) - UTC -6</option>
+    <option value="Guinea">Guinea (Conakry) - UTC +0</option>
+    <option value="Guinea-Bissau">Guinea-Bissau (Bissau) - UTC +0</option>
+    <option value="Guyana">Guyana (Georgetown) - UTC -4</option>
+    <option value="Haiti">Haiti (Port-au-Prince) - UTC -5</option>
+    <option value="Honduras">Honduras (Tegucigalpa) - UTC -6</option>
+    <option value="Hungary">Hungary (Budapest) - UTC +1</option>
+    <option value="Iceland">Iceland (Reykjavik) - UTC +0</option>
+    <option value="India">India (New Delhi) - UTC +5.5</option>
+    <option value="Indonesia">Indonesia (Jakarta) - UTC +7</option>
+    <option value="Iran">Iran (Tehran) - UTC +3.5</option>
+    <option value="Iraq">Iraq (Baghdad) - UTC +3</option>
+    <option value="Ireland">Ireland (Dublin) - UTC +0</option>
+    <option value="Israel">Israel (Jerusalem) - UTC +2</option>
+    <option value="Italy">Italy (Rome) - UTC +1</option>
+    <option value="Jamaica">Jamaica (Kingston) - UTC -5</option>
+    <option value="Japan">Japan (Tokyo) - UTC +9</option>
+    <option value="Jordan">Jordan (Amman) - UTC +2</option>
+    <option value="Kazakhstan">Kazakhstan (Nur-Sultan) - UTC +6</option>
+    <option value="Kenya">Kenya (Nairobi) - UTC +3</option>
+    <option value="Kuwait">Kuwait (Kuwait City) - UTC +3</option>
+    <option value="Kyrgyzstan">Kyrgyzstan (Bishkek) - UTC +6</option>
+    <option value="Laos">Laos (Vientiane) - UTC +7</option>
+    <option value="Latvia">Latvia (Riga) - UTC +2</option>
+    <option value="Lebanon">Lebanon (Beirut) - UTC +2</option>
+    <option value="Lesotho">Lesotho (Maseru) - UTC +2</option>
+    <option value="Liberia">Liberia (Monrovia) - UTC +0</option>
+    <option value="Libya">Libya (Tripoli) - UTC +2</option>
+    <option value="Liechtenstein">Liechtenstein (Vaduz) - UTC +1</option>
+    <option value="Lithuania">Lithuania (Vilnius) - UTC +2</option>
+    <option value="Luxembourg">Luxembourg (Luxembourg City) - UTC +1</option>
+    <option value="Madagascar">Madagascar (Antananarivo) - UTC +3</option>
+    <option value="Malawi">Malawi (Lilongwe) - UTC +2</option>
+    <option value="Malaysia">Malaysia (Kuala Lumpur) - UTC +8</option>
+    <option value="Maldives">Maldives (Malé) - UTC +5</option>
+    <option value="Mali">Mali (Bamako) - UTC +0</option>
+    <option value="Malta">Malta (Valletta) - UTC +1</option>
+    <option value="Marshall Islands">Marshall Islands (Majuro) - UTC +12</option>
+    <option value="Mauritania">Mauritania (Nouakchott) - UTC +0</option>
+    <option value="Mauritius">Mauritius (Port Louis) - UTC +4</option>
+    <option value="Mexico">Mexico (Mexico City) - UTC -6</option>
+    <option value="Micronesia">Micronesia (Palikir) - UTC +10</option>
+    <option value="Moldova">Moldova (Chisinau) - UTC +2</option>
+    <option value="Monaco">Monaco (Monaco) - UTC +1</option>
+    <option value="Mongolia">Mongolia (Ulaanbaatar) - UTC +8</option>
+    <option value="Montenegro">Montenegro (Podgorica) - UTC +1</option>
+    <option value="Morocco">Morocco (Rabat) - UTC +1</option>
+    <option value="Mozambique">Mozambique (Maputo) - UTC +2</option>
+    <option value="Myanmar">Myanmar (Naypyidaw) - UTC +6.5</option>
+    <option value="Namibia">Namibia (Windhoek) - UTC +2</option>
+    <option value="Nauru">Nauru (Yaren) - UTC +12</option>
+    <option value="Nepal">Nepal (Kathmandu) - UTC +5.75</option>
+    <option value="Netherlands">Netherlands (Amsterdam) - UTC +1</option>
+    <option value="New Zealand">New Zealand (Wellington) - UTC +13</option>
+    <option value="Nicaragua">Nicaragua (Managua) - UTC -6</option>
+    <option value="Niger">Niger (Niamey) - UTC +1</option>
+    <option value="Nigeria">Nigeria (Abuja) - UTC +1</option>
+    <option value="North Macedonia">North Macedonia (Skopje) - UTC +1</option>
+    <option value="Norway">Norway (Oslo) - UTC +1</option>
+    <option value="Oman">Oman (Muscat) - UTC +4</option>
+    <option value="Pakistan">Pakistan (Islamabad) - UTC +5</option>
+    <option value="Palau">Palau (Ngerulmud) - UTC +9</option>
+    <option value="Panama">Panama (Panama City) - UTC -5</option>
+    <option value="Papua New Guinea">Papua New Guinea (Port Moresby) - UTC +10</option>
+    <option value="Paraguay">Paraguay (Asunción) - UTC -3</option>
+    <option value="Peru">Peru (Lima) - UTC -5</option>
+    <option value="Philippines">Philippines (Manila) - UTC +8</option>
+    <option value="Poland">Poland (Warsaw) - UTC +1</option>
+    <option value="Portugal">Portugal (Lisbon) - UTC +0</option>
+    <option value="Qatar">Qatar (Doha) - UTC +3</option>
+    <option value="Romania">Romania (Bucharest) - UTC +2</option>
+    <option value="Russia">Russia (Moscow) - UTC +3</option>
+    <option value="Rwanda">Rwanda (Kigali) - UTC +2</option>
+    <option value="Saint Kitts and Nevis">Saint Kitts and Nevis (Basseterre) - UTC -4</option>
+    <option value="Saint Lucia">Saint Lucia (Castries) - UTC -4</option>
+    <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines (Kingstown) - UTC -4</option>
+    <option value="Samoa">Samoa (Apia) - UTC +13</option>
+    <option value="San Marino">San Marino (San Marino) - UTC +1</option>
+    <option value="Sao Tome and Principe">Sao Tome and Principe (São Tomé) - UTC +0</option>
+    <option value="Saudi Arabia">Saudi Arabia (Riyadh) - UTC +3</option>
+    <option value="Senegal">Senegal (Dakar) - UTC +0</option>
+    <option value="Serbia">Serbia (Belgrade) - UTC +1</option>
+    <option value="Seychelles">Seychelles (Victoria) - UTC +4</option>
+    <option value="Sierra Leone">Sierra Leone (Freetown) - UTC +0</option>
+    <option value="Singapore">Singapore (Singapore) - UTC +8</option>
+    <option value="Slovakia">Slovakia (Bratislava) - UTC +1</option>
+    <option value="Slovenia">Slovenia (Ljubljana) - UTC +1</option>
+    <option value="Solomon Islands">Solomon Islands (Honiara) - UTC +11</option>
+    <option value="Somalia">Somalia (Mogadishu) - UTC +3</option>
+    <option value="South Africa">South Africa (Pretoria) - UTC +2</option>
+    <option value="South Korea">South Korea (Seoul) - UTC +9</option>
+    <option value="South Sudan">South Sudan (Juba) - UTC +3</option>
+    <option value="Spain">Spain (Madrid) - UTC +1</option>
+    <option value="Sri Lanka">Sri Lanka (Colombo) - UTC +5.5</option>
+    <option value="Sudan">Sudan (Khartoum) - UTC +2</option>
+    <option value="Suriname">Suriname (Paramaribo) - UTC -3</option>
+    <option value="Sweden">Sweden (Stockholm) - UTC +1</option>
+    <option value="Switzerland">Switzerland (Bern) - UTC +1</option>
+    <option value="Syria">Syria (Damascus) - UTC +2</option>
+    <option value="Taiwan">Taiwan (Taipei) - UTC +8</option>
+    <option value="Tajikistan">Tajikistan (Dushanbe) - UTC +5</option>
+    <option value="Tanzania">Tanzania (Dodoma) - UTC +3</option>
+    <option value="Thailand">Thailand (Bangkok) - UTC +7</option>
+    <option value="Togo">Togo (Lomé) - UTC +0</option>
+    <option value="Tonga">Tonga (Nuku'alofa) - UTC +13</option>
+    <option value="Trinidad and Tobago">Trinidad and Tobago (Port of Spain) - UTC -4</option>
+    <option value="Tunisia">Tunisia (Tunis) - UTC +1</option>
+    <option value="Turkey">Turkey (Ankara) - UTC +3</option>
+    <option value="Turkmenistan">Turkmenistan (Ashgabat) - UTC +5</option>
+    <option value="Tuvalu">Tuvalu (Funafuti) - UTC +12</option>
+    <option value="Uganda">Uganda (Kampala) - UTC +3</option>
+    <option value="Ukraine">Ukraine (Kyiv) - UTC +2</option>
+    <option value="United Arab Emirates">United Arab Emirates (Abu Dhabi) - UTC +4</option>
+    <option value="United Kingdom">United Kingdom (London) - UTC +0</option>
+    <option value="United States">United States (Washington, D.C.) - UTC -5</option>
+    <option value="Uruguay">Uruguay (Montevideo) - UTC -3</option>
+    <option value="Uzbek
+
+            </select>
+
+            <label for="alarm-time">Time (HH:MM):</label>
+            <input type="time" id="alarm-time" required>
+            <button type="submit">Set Alarm</button>
+        </form>
+
+        <ul id="alarm-list"></ul>
+
+        <!-- Modal for Alarm -->
+        <div id="alarm-modal" class="modal">
+            <div class="modal-content">
+                <span id="close-modal" class="close">&times;</span>
+                <h2>Alarm Going Off!</h2>
+                <div id="analog-clock"></div>
+                <div id="countdown-timer">Countdown: 5:00</div>
+            </div>
+        </div>
+        <div>
+            <input type="datetime-local" id="alarm-time" />
+            <button id="set-alarm">Set Alarm</button>
+            <p id="time-left"></p> <!-- Display for time left -->
+        </div>
+        
+    </main>
+    <audio id="alarm-sound" src="undertaker-r-1884.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+/* Reset and Box Model */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif; /* Default font */
+    line-height: 1.6;
+    background-color: #87A2FF; /* Light background */
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background: #5bc0de; /* Light blue background */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Clocks Section */
+#clocks {
+    margin-bottom: 20px;
+}
+
+/* Time Zone Boxes */
+.time-zone {
+    background: #ffffff; /* White background */
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Headings */
+h2 {
+    color: #5bc0de; /* Same color as header */
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+/* Label Styles */
+label {
+    margin: 10px 0 5px;
+}
+
+/* Input Styles */
+select, input[type="time"], button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button Styles */
+button {
+    background: #5cb85c; /* Green background */
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049; /* Darker green on hover */
+}
+
+/* Alarm List */
+#alarm-list {
+    list-style: none;
+    padding: 0;
+}
+
+#alarm-list li {
+    background: #f9f9f9; /* Light item background */
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    main {
+        padding: 10px;
+    }
+
+    form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .time-zone {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}
+/* Light Mode */
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .clock {
+    width: 100%;
+  }
+}
